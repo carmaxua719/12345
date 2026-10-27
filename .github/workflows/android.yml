@@ -1,17 +1,8 @@
 name: Build Android APK
 
-on:
-workflow_dispatch:
-push:
-branches: [ main, master ]
+on: workflow_dispatch: push: branches: - main - master
 
-jobs:
-build:
-runs-on: ubuntu-24.04
-
-steps:
-  - name: Checkout source
-    uses: actions/checkout@v4
+jobs: build: runs-on: ubuntu-24.04 steps: - name: Checkout source uses: actions/checkout@v4
 
   - name: Set up Java
     uses: actions/setup-java@v4
